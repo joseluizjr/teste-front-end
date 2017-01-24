@@ -1,6 +1,6 @@
-var form = $('#search-film');
-var search_field = $('#search-film-input');
-var results = $('#results');
+var form = $('#search-film'),
+    search_field = $('#search-film-input'),
+    results = $('#results');
 
 form.on('submit', function(e) {
   e.preventDefault();
@@ -14,6 +14,7 @@ form.on('submit', function(e) {
         .append($('<img />').attr('src', item.Poster))
         .append($('<hr />'))
         .appendTo(results);
+      $('body').addClass('search');
     });
   });
 });
