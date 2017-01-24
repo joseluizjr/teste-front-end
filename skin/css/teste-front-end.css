@@ -1,14 +1,133 @@
 @charset "utf-8";
 /*CSS - HTMLBrasil*/
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .center {
-  margin: 0 auto;
+	margin: 0 auto;
+}
+*:focus {
+	outline: none;
+}
+body:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	background-image: url(data:image/svg+xml;base64,pd94bwwgdmvyc2lvbj0ims4wiia/pjxzdmcgeg1sbnm9imh0d…igagvpz2h0psixiibmawxspsj1cmwoi2dyywqtdwnnzy1nzw5lcmf0zwqpiiavpjwvc3znpg==);
+	background-image: linear-gradient(45deg, #000000 0%, #b3b3b3 50%, #000000 100%);
+}
+
+#search-film {
+	width: 480px;
+	height: 70px;
+	padding: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -35px 0 0 -240px;
+	background: #444;
+	background: rgba(0,0,0,.2);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+	-webkit-transition: 1.0s;
+	-moz-transition: 1.0s;
+	-ms-transition: 1.0s;
+	-o-transition: 1.0s;
+	transition: 1.0s;
+}
+.search #search-film {
+	top: 0;
+	margin-top: 0;
+}
+#search-film input {
+	width: 340px;
+	height: 40px;
+	padding: 10px 5px;
+	float: left;    
+	font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	border: 0;
+	background: #eee;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;      
+}
+#search-film input:focus {
+	outline: 0;
+	background: #fff;
+	-moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+	box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+#search-film input::-webkit-input-placeholder {
+	color: #999;
+	font-weight: normal;
+	font-style: italic;
+}
+#search-film input:-moz-placeholder {
+	color: #999;
+	font-weight: normal;
+	font-style: italic;
+}
+#search-film input:-ms-input-placeholder {
+	color: #999;
+	font-weight: normal;
+	font-style: italic;
+}
+#search-film button {
+	overflow: visible;
+	position: relative;
+	float: right;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 40px;
+	width: 110px;
+	font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color: #fff;
+	text-transform: uppercase;
+	background: #d83c3c;
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+#search-film button:hover{		
+	background: #e54040;
+}
+#search-film button:active,
+	#search-film button:focus{   
+	background: #c42f2f;    
+}
+#search-film button:before {
+	content: '';
+	position: absolute;
+	border-width: 8px 8px 8px 0;
+	border-style: solid solid solid none;
+	border-color: transparent #d83c3c transparent;
+	top: 12px;
+	left: -6px;
+}
+#search-film button:hover:before{
+	border-right-color: #e54040;
+}
+#search-film button:focus:before{
+	border-right-color: #c42f2f;
+}
+#search-film button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
 }
