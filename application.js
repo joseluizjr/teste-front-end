@@ -9,11 +9,12 @@ form.on('submit', function(e) {
   $.get(url_search, function(response) {
     results.empty();
     $.each(response.Search, function(index, item) {
-      $('<div />')
-        .append($('<h4 />').html(item.Title))
+      $('<div class="item" />')
         .append($('<img />').attr('src', item.Poster))
-        .append($('<hr />'))
+        .append($('<p />').html(item.Year+', '+item.Type+', '+item.imdbID))
+        .append($('<h1 />').html(item.Title))
         .appendTo(results);
+      $('#results').append("<br clear='all'>");
       $('body').addClass('search');
     });
   });
