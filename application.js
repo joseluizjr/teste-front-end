@@ -11,7 +11,7 @@ form.on('submit', function(e) {
     $.each(response.Search, function(index, item) {
       $('<div class="item" />')
         .append($('<img />').attr('src', item.Poster))
-        .append($('<p />').html(item.Year+', '+item.Type+', '+item.imdbID))
+        .append($('<p />').html('Ano de lançamento: '+item.Year+', Categoria: '+item.Type+', ID: '+item.imdbID))
         .append($('<h1 />').html(item.Title))
         .appendTo(results);
       $('#results').append("<br clear='all'>");
